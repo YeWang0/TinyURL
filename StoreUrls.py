@@ -18,8 +18,9 @@ def storeUrl(url):
     index=db.url_convert.count()+1
     ShortUrl=Long2Short(index,len(NumDict.keys()),NumDict)
     result={'index':index,'actual_url':url,'shorten_url':ShortUrl}
-    print result
+    # print result
     urls.insert_one(result)
+    return True
 
 storeUrl('https://leetcode.com/problemset/algorithms')
 

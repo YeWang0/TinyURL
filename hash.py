@@ -1,6 +1,6 @@
 from hashDict import NumDict
 
-def hash(id,base,NumDict):
+def Long2Short(id,base,NumDict):
     res=''
     while id>0:
         t=id%base
@@ -10,9 +10,9 @@ def hash(id,base,NumDict):
         res+='0'
     return res[::-1]
 
-print hash(123123123291238928912312918,62,NumDict)
+# print Long2Short(123123123291238928912312918,62,NumDict)
 
-def reverseHash(shortUrl,base,NumDict):
+def Short2Long(shortUrl,base,NumDict):
     res=0
     for i in xrange(len(shortUrl)):
         for k,v in NumDict.iteritems():
@@ -21,4 +21,4 @@ def reverseHash(shortUrl,base,NumDict):
                 break
     return res
 
-print reverseHash('9VwINrlQtai1kc6',62,NumDict)==123123123291238928912312918
+# print Short2Long('9VwINrlQtai1kc6',62,NumDict)==123123123291238928912312918
